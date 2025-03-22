@@ -1,0 +1,22 @@
+{
+    "cecilia.perdomo@gmail.com": {
+        "nombre": "Cecilia Perdomo",
+        "edad": 40,
+        "intereses": [
+            "tecnolog\u00eda",
+            "moda",
+            "farmacia"
+        ],
+        "contrase\u00f1a": "segura123"
+    },
+    "omar@gmail.com": {
+        "nombre": "Omar",
+        "edad": 33,
+        "intereses": [
+            "Comida",
+            " Bicicleta",
+            " Futbol"
+        ],
+        "contrase\u00f1a": "123456"
+    }
+}
