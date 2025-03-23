@@ -23,6 +23,6 @@ python setup.py sdist
 Esto generará un archivo `.tar.gz` dentro de dist/, listo para compartir o instalar con pip install paquete `.tar.gz`.
 
 ## 🎯 ¿Por qué usar paquetes redistribuibles?
-✅ Permiten instalar y reutilizar tu código fácilmente.
-✅ Facilitan compartirlo con otras personas o publicarlo en PyPI.
-✅ Mantienen una estructura modular y organizada.
+- ✅ Permiten instalar y reutilizar tu código fácilmente.
+- ✅ Facilitan compartirlo con otras personas o publicarlo en PyPI.
+- ✅ Mantienen una estructura modular y organizada.
