@@ -2,19 +2,20 @@ from paquete_clientes.modulo_cliente import Cliente
 from paquete_clientes.modulo_utilidades import guardar_datos_compras, cargar_datos_compras
 from paquete_clientes.modulo_autenticacion import registrar_usuario, login, cargar_datos
 
-datos_clientes = cargar_datos_compras()
 
-cliente1 = Cliente("Cecilia Perdomo", "cecilia.perdomo@gmail.com", 40, ["tecnología", "moda", "farmacia"])
+# Registro y login de usuario por defecto
+print(registrar_usuario("Cecilia Perdomo", "cecilia.perdomo@gmail.com", 40, ["tecnología", "moda", "farmacia"], "segura123"))
+print(login("cecilia.perdomo@gmail.com", "segura123"))
+
+
+#datos_clientes = cargar_datos_compras()
+cliente1 = Cliente("Cecilia B. Perdomo", "cecilia.b.perdomo@gmail.com", 40, ["tecnología", "moda", "farmacia"])
 
 cliente1.comprar("Laptop", "Walmart")
 cliente1.comprar("Perfume", "Walmart")
 cliente1.comprar("Zapatos", "Amazon")
 
 guardar_datos_compras({cliente1. nombre + " - " + cliente1.email: cliente1.mostrar_historial()})
-
-# Registro y login de usuario
-print(registrar_usuario("Cecilia Perdomo", "cecilia.perdomo@gmail.com", 40, ["tecnología", "moda", "farmacia"], "segura123"))
-print(login("cecilia.perdomo@gmail.com", "segura123"))
 
 def menu():
     datos_clientes = cargar_datos()
@@ -40,9 +41,14 @@ def menu():
         
         elif opcion == "2":
             email = input("Email: ")
-            password = input("Contraseña: ")
-            if login(email, password):
+            password = input("Contraseña: ")    
+
+            resultado = login(email, password)
+
+            if resultado == "Inicio de sesión exitoso.":
+                datos_clientes = cargar_datos()
                 usuario_data = datos_clientes.get(email)
+
                 if usuario_data:
                     cliente = Cliente(
                         nombre=usuario_data.get("nombre", "Desconocido"),
@@ -61,6 +67,8 @@ def menu():
                 producto = input("Ingrese el producto a comprar: ")
                 tienda = input("Ingrese la tienda de compra: ")
                 cliente.comprar(producto, tienda)
+
+                datos_clientes = cargar_datos()
                 datos_clientes[cliente.email] = {
                     "nombre": cliente.nombre,
                     "edad": cliente.edad,
