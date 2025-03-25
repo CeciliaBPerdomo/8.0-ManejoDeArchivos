@@ -8,3 +8,7 @@ from .modulo_utilidades import guardar_datos_compras, cargar_datos_compras
 
 #Modulo de autenticacion
 from .modulo_autenticacion import registrar_usuario, login, cargar_datos, guardar_datos
+
+
+
+# python setup.py sdist -> paquete re distribuible

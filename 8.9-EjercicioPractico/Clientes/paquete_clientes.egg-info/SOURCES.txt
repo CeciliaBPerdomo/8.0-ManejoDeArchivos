@@ -1,0 +1,9 @@
+setup.py
+paquete_clientes/__init__.py
+paquete_clientes/modulo_autenticacion.py
+paquete_clientes/modulo_cliente.py
+paquete_clientes/modulo_utilidades.py
+paquete_clientes.egg-info/PKG-INFO
+paquete_clientes.egg-info/SOURCES.txt
+paquete_clientes.egg-info/dependency_links.txt
+paquete_clientes.egg-info/top_level.txt
